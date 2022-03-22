@@ -11,7 +11,7 @@ function round(playerSelection , computerSelection) {
 
     console.log(computerSelection);
 
-    let win = `Yow win! ${playerSelection} beats ${computerSelection}`;
+    let win = `Yow Win! ${playerSelection} beats ${computerSelection}`;
     let lose = `Yow Lose! ${computerSelection} beats ${playerSelection}`;
     let result;
     if(playerSelection == computerSelection){
@@ -35,16 +35,13 @@ function game(){
         let playerSelection = (prompt("Rock,Paper or Scissors?" ,"")).toLowerCase();
         let computerSelection = computerPlay();
         let pointResult = round(playerSelection,computerSelection);
-        if(pointResult.includes("win")) {
+        if(pointResult.includes("Win")) {
             playerPoints++;
         }
-        else if(pointResult.includes("lose")){
+        else if(pointResult.includes("Lose")){
             computerPoints++;
         }
-        else{
-            playerPoints++;
-            computerPoints++;
-        }
+
         alert(pointResult);
 
     }
